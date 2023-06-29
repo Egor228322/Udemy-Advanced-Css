@@ -1,19 +1,59 @@
 .popup {
     background-color: rgba($color-black, 0.6);
     
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 300;
+    
+    /* opacity: 0;
+    visibility: 0; */
+    display: none;
 
     &__content {
         background-color: $color-white;
         @include positionCenter;
-        height: 50rem;
+        height: auto;
         width: 75%;
         box-shadow: 0 2rem 4rem rgba($color-black, 0.1);
         border-radius: 3px;
+        display: table;
+    }
+
+    &__left {
+        width: 33.333333333333333333333333333333333333333333333333333333333333%;
+        display: table-cell;
+    }
+
+    &__right {
+        width: 66.666666666666666666666666666666666666666666666666666666666666%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 5rem;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+
+        -moz-column-count: 2;
+        -moz-column-gap: 4rem;
+        -moz-column-rule: 1px solid $color-grey-light-2;
+
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid $color-grey-light-2;
+
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
     }
 }
